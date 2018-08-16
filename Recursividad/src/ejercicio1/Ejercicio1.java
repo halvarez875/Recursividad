@@ -14,11 +14,22 @@ public class Ejercicio1 {
         
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ejercicio1 FACTORIAL");
-        System.out.println("Ingrese un numero:");
+        System.out.print("Ingrese un numero:");
         int nro = scanner.nextInt();
-       }
+        factorial(nro);
+        System.out.println("El factorial es: " + factorial(nro));
+        }
     
-    int factorial(){
-    return 0;
+    public static int factorial(int n){
+        int i;
+        
+        if(n == 1){
+            return n;
+        }
+        
+        i = n-1;
+        System.out.println(""+n +"*"+i +"!");
+        return  n*factorial(n-1);
+        
     }
 }
